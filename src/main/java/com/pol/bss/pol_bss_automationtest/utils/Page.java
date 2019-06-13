@@ -1,0 +1,41 @@
+package com.pol.bss.pol_bss_automationtest.utils;
+
+public enum Page {
+
+    BatchMessagePage,
+    EmailSentPage,
+    DeviceRegistrationPage,
+    LoginPage,
+    LogoutPage,
+    MaintenancePage,
+    HomePage,
+    BranchPerformancePage,
+    ITIncidentPage,
+    MessagingPage,
+    MessageInboxPage,
+    MessageSentPage,
+    MessageReportingPage,
+    FaqPage,
+    SettingsPage,
+    ComparingSalesValuesPage,
+    ComparingSalesVolumesPage,
+    UnableToLoginPage,
+    ForgotPasswordPage,
+    RegisterDevicePage,
+    ITSMLandingPage,
+    BranchMessagingPage,
+    ConfigurationLandingPage,
+    ForcedLogoutPage,
+    ManageAndPublishMessagesPage,
+    NewSessionDetected,
+    KnowledgeBase,
+    MessageLandingPage,
+    SentMessagePage,
+    ReportingMessagePage,
+    BranchMessagingPagePublisher,
+    OrderCoinsPage,
+    ViewUpdatePage,
+    CashManagementPage,
+    RegistrationOK
+
+}
