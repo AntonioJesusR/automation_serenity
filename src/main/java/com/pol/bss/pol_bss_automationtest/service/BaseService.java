@@ -34,19 +34,7 @@ public class BaseService  {
         return response;
     }
 
-    public static Response request(String url, HttpMethod httpMethod, RequestSpecification requestSpecification, QueryParameters queryParams) {
-        return request(url, httpMethod, requestSpecification.queryParams(getStringStringMap(queryParams)));
-    }
-
-    public static Response request(String url, HttpMethod httpMethod, QueryParameters params) {
-        return request(url, httpMethod, SerenityRest.given().queryParams(getStringStringMap(params)));
-    }
-
-    public static Response request(String url, HttpMethod httpMethod, QueryParameters params, Header header) {
-        return request(url, httpMethod, SerenityRest.given().queryParams(getStringStringMap(params)).header(header));
-    }
-
-    private static RequestSpecification addLogsAndDefaultHeaders(RequestSpecification requestSpecification) {
+       private static RequestSpecification addLogsAndDefaultHeaders(RequestSpecification requestSpecification) {
         return requestSpecification
                 .header(new Header("Content-Type", "application/json"))
                 .log()
@@ -64,9 +52,7 @@ public class BaseService  {
         return request(url, HttpMethod.GET, SerenityRest.given().queryParams(map));
     }
 
-    public static Response getWithParams(String url, QueryParameters params) {
-        return request(url, HttpMethod.GET, SerenityRest.given().queryParams(getStringStringMap(params)));
-    }
+
 
     /**
      * Performs a GET request to the given url
@@ -90,25 +76,6 @@ public class BaseService  {
         return request(url, HttpMethod.POST, SerenityRest.given().body(body));
     }
 
-    private static Map<String, Object> getStringStringMap(QueryParameters params) {
-        Method[] methods = params.getClass().getMethods();
-        Map<String, Object> map = new HashMap<>();
-        for (Method m : methods) {
-            if (m.getName().startsWith("get") && !m.getName().contains("getClass")) {
-                Object value = null;
-                try {
-                    value = m.invoke(params);
-                } catch (Exception e) {
-                    fail("Please check the query param, which is incorrect");
-                }
-                if (value != null) {
-                    String key = m.getName().substring(3);
-                    String finalKey = Character.toLowerCase(key.charAt(0)) + key.substring(1);
-                    map.put(finalKey, value);
-                }
-            }
-        }
-        return map;
-    }
+
 
 }
