@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @NoArgsConstructor
 public class UserCredentials {
 
-    private static final String BASIC = "Basic ";
+
     private String username;
     private String password;
     private String passHashed;
