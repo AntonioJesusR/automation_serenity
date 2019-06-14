@@ -13,3 +13,8 @@
       Dado Navego a la pagina web de Edmodo
       Cuando Introduzco mi usuario y mi contraseña incorrectamente
       Entonces Aparecerá un mensaje de error
+
+    Escenario: Puedo iniciar sesiones en dos pestañas distintas
+      Dado Navego a la pagina web de Edmodo
+      Cuando Introduzco mi usuario y mi contraseña incorrectamente
+      Entonces Aparecerá un mensaje de error
