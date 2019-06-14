@@ -6,16 +6,17 @@ import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 import net.thucydides.core.annotations.Steps;
 
+import static com.pol.bss.pol_bss_automationtest.SessionVariables.BUSQUEDA;
 import static net.serenitybdd.core.Serenity.setSessionVariable;
 
 public class BusquedaEnEdmodoStepDefinitions {
 
     @Steps
-    BusquedaEnEdmodoSteps busquedaEdmodo;
+    private BusquedaEnEdmodoSteps busquedaEdmodo;
 
     @Cuando("^Introduzco (.+) en el buscador$")
     public void introduzcoBusquedaEnElBuscador(String busqueda) {
-    setSessionVariable("BUSQUEDA").to(busqueda);
+    setSessionVariable(BUSQUEDA).to(busqueda);
     busquedaEdmodo.busqueda();
     }
 

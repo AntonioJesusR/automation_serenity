@@ -8,15 +8,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.remote.RemoteWebElement;
 
+import static com.pol.bss.pol_bss_automationtest.SessionVariables.BUSQUEDA;
 import static net.serenitybdd.core.Serenity.sessionVariableCalled;
 
 public class BusquedaEnEdmodoPage extends PageObject {
     @FindBy(xpath="//*[@id=\"LoggedInHeader\"]/div/div[2]/div[2]/input")
-    WebElementFacade buscador;
+    private WebElementFacade buscador;
 
 
     public void buscador(){
-        String palabra = sessionVariableCalled("BUSQUEDA");
+        String palabra = sessionVariableCalled(BUSQUEDA);
         buscador.click();
         buscador.sendKeys(palabra);
         buscador.sendKeys(Keys.ENTER);

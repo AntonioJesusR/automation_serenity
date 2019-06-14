@@ -12,4 +12,4 @@ Característica: Hago una busqueda en el buscador de Edmodo
     Ejemplos:
     |busqueda|
     |Edwin   |
-    |Entrega |
+    |Manuel Torres Molina|
