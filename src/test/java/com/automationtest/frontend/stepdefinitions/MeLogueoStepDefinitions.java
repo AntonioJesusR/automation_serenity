@@ -10,9 +10,9 @@ public class MeLogueoStepDefinitions {
 
     @Steps MeLogueoStep logueoStep;
 
-    @Dado("^Navego a la pagina web de Edmodo$")
-    public void nagegoAEdmodo(){
-    logueoStep.navegoAEdmodo();
+    @Dado("^Navego a la pagina web$")
+    public void loginWeb(){
+    logueoStep.loginWeb();
     }
     @Cuando("^Introduzco mi usuario y mi contraseña correctamente$")
     public void introduzcoCredenciales(){

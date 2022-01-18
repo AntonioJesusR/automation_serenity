@@ -26,7 +26,7 @@ public class MeLogueoPage extends PageObject {
 
     @WhenPageOpens
     public void init(){
-    getDriver().get("https:/www.google.com");
+    getDriver().get($WEB);
     }
 
     public void Logueo(String usuario,String contraseña){

@@ -1,7 +1,7 @@
 defaultTasks 'clean', 'test', 'aggregate'
 buildscript {
     ext {
-        springBootVersion = '2.0.4.RELEASE'
+       springBootVersion = '2.6.2'
        retrofitVersion = '2.3.0'
 
 
@@ -23,7 +23,6 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'net.serenity-bdd.aggregator'
 
-group = 'com.pol.bss'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -44,7 +43,7 @@ dependencies {
     // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured
     compile group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '1.9.35'
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
     // https://mvnrepository.com/artifact/org.jboss.aerogear/aerogear-otp-java
  	compile 'org.jboss.aerogear:aerogear-otp-java:1.0.0'
 

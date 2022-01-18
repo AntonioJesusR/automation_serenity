@@ -8,8 +8,8 @@ public class MeLogueoStep extends UiSteps {
 
     MeLogueoPage page;
     //AQUI DEFINIREMOS LO QUE HAREMOS EN CADA METODO LLAMANDO A LOS DIFERENTESCONPONENTES
-    @Step("Navego a la pagina de Edmodo")
-    public void navegoAEdmodo(){
+    @Step("Navego a la pagina web")
+    public void loginWeb(){
     page.init();
     }
 
