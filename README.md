@@ -1,4 +1,4 @@
-# pol_bss_automationtest
+# Automationtest
 Automation test project for Branch Hub
 
 
